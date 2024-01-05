@@ -2,6 +2,7 @@
 
 i = 0
 
+
 def print_reversed_list_integer(my_list=[]):
     global i
     if (i < len(my_list)):
