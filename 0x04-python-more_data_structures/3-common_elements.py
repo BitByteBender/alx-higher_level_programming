@@ -2,10 +2,7 @@
 
 def common_elements(set_1, set_2):
     new_set = set()
-    if not set_1 or not set_2:
-        return (None)
-    else:
-        for i in set_1:
-            if i in set_2:
-                new_set.add(i)
+    for i in set_1:
+        if i in set_2:
+            new_set.add(i)
     return (new_set)
