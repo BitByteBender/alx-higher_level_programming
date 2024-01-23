@@ -20,10 +20,11 @@ class Square:
         else:
             self.__size = size
 
-    """
-    Calc square area
-    Returns:
-        calculated square area(int)
-    """
+    """Method: Area"""
     def area(self):
+        """
+        Calc square area
+        Returns:
+            calculated square area(int)
+        """
         return (self.__size ** 2)
