@@ -1,9 +1,18 @@
 #!/usr/bin/python3
 
 class Square:
-
+    """Square class"""
+    """private instance attribute"""
     def __init__(self, size=0):
-
+        """
+        Square class constructor
+        Args:
+            size: integer square size
+        Note:
+            checks if size is an integer
+            checks if size is greater than or equal 0
+            sets the size
+        """
         if not isinstance(size, int):
             raise TypeError("size must be an integer")
         elif (size < 0):
@@ -11,5 +20,10 @@ class Square:
         else:
             self.__size = size
 
+    """
+    Calc square area
+    Returns:
+        calculated square area(int)
+    """
     def area(self):
         return (self.__size ** 2)
