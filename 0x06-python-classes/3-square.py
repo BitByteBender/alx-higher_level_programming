@@ -1,7 +1,8 @@
 #!/usr/bin/python3
+"""Square class"""
+
 
 class Square:
-    """Square class"""
     """private instance attribute"""
     def __init__(self, size=0):
         """
@@ -20,7 +21,7 @@ class Square:
         else:
             self.__size = size
 
-    """Method: Area"""
+    """Public instance Method"""
     def area(self):
         """
         Calc square area
