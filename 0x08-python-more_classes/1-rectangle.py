@@ -11,8 +11,8 @@ class Rectangle:
             width: integer rectangle width
             height: integer rectangle height
         """
-        self.__width = width
         self.__height = height
+        self.__width = width
 
     """Getter Method"""
     @property
