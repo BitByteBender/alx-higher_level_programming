@@ -7,29 +7,36 @@ Using ``add_integer``
 This is 0-add_integer text file in reStructuredText format.
 First import ``add_integer`` from the ``0-add_integer`` mod
 
-
     >>> sum = __import__('0-add_integer').add_integer
 
+#Testing sum of two positive integers:
     >>> sum(5, 10)
     15
 
+#Testing sum of two negative integers:
     >>> sum(-3, -5)
     -8
 
+#Testing sum of a positive and be negative:
     >>> sum(5, -5)
     0
 
+#Testing sum of a negative and be positive:
     >>> sum(-7, 17)
     10
 
+#Testing sum of a integer and b float:
     >>> sum(5, 5.5)
     10
 
+#Testing sum of two floats:
     >>> sum(9.9, 0.1)
     9
 
+#Testing sum of two floats a pos and b negative:
     >>> sum(21.9, -10.1)
     11
 
-    >>> sum(180.99, -7)
-    173
+#Testing sum of a positive with b default:
+    >>> sum(180.99)
+    278
