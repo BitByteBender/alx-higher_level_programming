@@ -10,3 +10,7 @@ def add_integer(a, b=98):
             return (int(a) + int(b))
     except TypeError as TE:
         return (TE)
+
+if (__name__ == "__main__"):
+    import doctest
+    doctest.testfile("tests/0-add_integer.txt")
