@@ -1,0 +1,57 @@
+The ``4-print_square`` mod
+========================
+
+Using ``print_square``
+----------------------
+
+This is 4-print_square text file in reStructuredText format.
+First import ``print_square`` from the ``4-print_square`` mod
+
+    >>> ps = __import__('4-print_square').print_square
+
+# Test square size
+    >>> ps(6)
+    ######
+    ######
+    ######
+    ######
+    ######
+    ######
+
+# Test square size
+    >>> ps(13)
+    #############
+    #############
+    #############
+    #############
+    #############
+    #############
+    #############
+    #############
+    #############
+    #############
+    #############
+    #############
+    #############
+
+# Test square size using float
+   >>> ps(7.8)
+   Trackback (most recent call last):
+   ...
+   TypeError: size must be an integer
+
+# Test square size using NaN
+   >>> ps("Solo")
+   Trackback (most recent call last):
+   ...
+   TypeError: size must be an integer
+
+# Test square size negative less than 0
+   >>> ps(-1)
+   Trackback (most recent call last):
+   ...
+   ValueError: size must be >= 0
+
+# Test square size equal 0
+   >>> ps (0)
+   
