@@ -19,7 +19,7 @@ First import ``say_my_name`` from the ``3-say_my_name`` mod
     ...
     TypeError: last_name must be a string
 
-# Test func with 2 NaS parms
+# Test func with 2 NaS(not a string) parms
     >>> snm(999, 0.99)
     Traceback (most recent call last):
     ...
