@@ -1,0 +1,34 @@
+The ``3-say_my_name`` mod
+========================
+
+Using ``say_my_name``
+----------------------
+
+This is 3-say_my_name text file in reStructuredText format.
+First import ``say_my_name`` from the ``3-say_my_name`` mod
+
+    >>> snm = __import__('3-say_my_name').say_my_name
+
+# Test func string params
+    >>> snm("Soufiane", "Sadgali")
+    My name is Soufiane Sadgali
+
+# Test func with 1 NaS(not a string) param
+    >>> snm("Jinwoo", 148)
+    Traceback (most recent call last):
+    ...
+    TypeError: last_name must be a string
+
+# Test func with 2 NaS parms
+    >>> snm(999, 0.99)
+    Traceback (most recent call last):
+    ...
+    TypeError: first_name must be a string
+
+# Test func string params
+    >>> snm("Shadow")
+    My name is Shadow 
+
+# Test func string params
+    >>> snm("", "Monarch")
+    My name is  Monarch
