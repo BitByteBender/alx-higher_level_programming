@@ -1,0 +1,52 @@
+The ``2-matrix_divided`` mod
+========================
+
+Using ``matrix_divided``
+----------------------
+
+This is 2-matrix_divided text file in reStructuredText format.
+First import ``matrix_divided`` from the ``2-matrix_divided`` mod
+
+    >>> mtx = __import__('2-matrix_divided').matrix_divided
+
+# Test matrix (empty rows)
+    >>> mtx([[], [], []], 5)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test matrix (1st arg list empty)
+    >>> mtx([[]], 6)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test matrix division by NaN
+    >>> mtx([[5]], "SS")
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+# Test matrix switch param type
+    >>> mtx(5, 7)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'int' object is not iterable
+
+# Test matrix is fully empty
+    >>> mtx([], 7)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+# Test matrix missing args
+    >>> mtx()
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
+
+# Test matrix with size unequality
+    >>> mtx([[4, 3.4], [5, 87], [4.5]], 11)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same size
