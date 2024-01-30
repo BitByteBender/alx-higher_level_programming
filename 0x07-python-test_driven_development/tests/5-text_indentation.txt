@@ -1,0 +1,24 @@
+The ``5-text_indentation`` mod
+========================
+
+Using ``text_indentation``
+----------------------
+
+This is 5-text_indentation text file in reStructuredText format.
+First import ``text_indentation`` from the ``5-text_indentation`` mod
+
+    >>> txt = __import__('5-text_indentation').text_indentation
+
+# Test seprs
+    >>> txt("Solo: Leveling? shadow. Monarch")
+    Solo:
+    <BLANKLINE>
+    Leveling?
+    <BLANKLINE>
+    shadow.
+    <BLANKLINE>
+    Monarch
+
+# Test number
+    >>> txt(99)
+    text must be a string
