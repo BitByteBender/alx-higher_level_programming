@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" lookup Function """
+
 
 def lookup(obj):
     """
