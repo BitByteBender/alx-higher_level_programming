@@ -1,8 +1,10 @@
 #!/usr/bin/python3
-""" MyInt class """
+""" MyInt class inherits from int """
 
 
 class MyInt(int):
+    """ MyInt class """
+
     def __eq__(self, int_val):
         """
         Overides equality operator
