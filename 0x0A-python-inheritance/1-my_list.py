@@ -6,7 +6,7 @@ class MyList(list):
     """ MyList class inherits from list """
     def print_sorted(self):
         """
-        Prints a list in asc order
+        Method prints a list in asc order
         """
         sortedList = sorted(self)
         print(sortedList)

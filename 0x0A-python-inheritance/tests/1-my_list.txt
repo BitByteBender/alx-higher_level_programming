@@ -1,0 +1,25 @@
+The ``1-my_list`` mod
+========================
+
+Using ``print_sorted``
+----------------------
+
+This is 1-my_list text file in reStructuredText format.
+First import ``MyList`` from the ``1-my_list`` mod
+
+    >>> MyList = __import__('1-my_list').MyList
+
+# Test list (empty)
+    >>> lt = MyList([])
+    >>> lt.print_sorted()
+    []
+
+# Test list (with positive numbers)
+    >>> lt = MyList([13, 6500, 35, 550, 74, 99])
+    >>> lt.print_sorted()
+    [13, 35, 74, 99, 550, 6500]
+
+# Test list (with negative numbers)
+    >>> lt = MyList([-3, -60, -135, -50, -4, -99])
+    >>> lt.print_sorted()
+    [-135, -99, -60, -50, -4, -3]
