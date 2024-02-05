@@ -1,0 +1,46 @@
+The ``7-base_geometry`` mod
+========================
+
+Using ``BaseGeometry``
+----------------------
+
+This is 1-my_list text file in reStructuredText format.
+First import ``BaseGeometry`` from the ``1-base_geometry`` mod
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+# Test method (area is not implemented)
+    >>> BG = BaseGeometry()
+    >>> BG.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
+
+# Test method (integer_validator using float)
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("name", 98.45)
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+# Test method (integer_validator using string)
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("name", "str")
+    Traceback (most recent call last):
+    ...
+    TypeError: name must be an integer
+
+# Test method (integer_validator using negative number)
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("name", -99)
+    Traceback (most recent call last):
+    ...
+    ValueError: name must be greater than 0
+
+# Test method (integer_validator using neutral number)
+    >>> BG = BaseGeometry()
+    >>> BG.integer_validator("name", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: name must be greater than 0
+
