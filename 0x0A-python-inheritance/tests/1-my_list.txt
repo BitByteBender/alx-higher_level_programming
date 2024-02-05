@@ -23,3 +23,8 @@ First import ``MyList`` from the ``1-my_list`` mod
     >>> lt = MyList([-3, -60, -135, -50, -4, -99])
     >>> lt.print_sorted()
     [-135, -99, -60, -50, -4, -3]
+
+# Test list (with positive & negative numbers)
+    >>> lt = MyList([83, 0, 35, -450, 54, -19])
+    >>> lt.print_sorted()
+    [-450, -19, 0, 35, 54, 83]
