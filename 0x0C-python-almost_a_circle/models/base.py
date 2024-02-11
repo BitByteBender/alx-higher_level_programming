@@ -30,12 +30,9 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """
+        Returns The JSON representatiion of an obj
         """
-        if isinstance(list_dictionaries, dict):
-            return (json.dumps(
-                   {key: list_dictionaries[key]
-                    for key in sorted(list_dictionaries)},
-                   sort_keys=True)
-            )
+        if (list_dictionaries is None) or (list_dictionaries == []):
+            return ("[]")
         else:
             return (json.dumps(list_dictionaries))
