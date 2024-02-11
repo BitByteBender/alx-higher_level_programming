@@ -31,6 +31,12 @@ class Base:
     def to_json_string(list_dictionaries):
         """
         Returns The JSON representatiion of an obj
+
+        Args:
+            list_dictionaries: dict list
+
+        Returns:
+          JSON str representaion
         """
         if (list_dictionaries is None) or (list_dictionaries == []):
             return ("[]")
