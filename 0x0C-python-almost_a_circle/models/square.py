@@ -49,3 +49,33 @@ class Square(Rectangle):
         """
         return ("[Square] ({}) {}/{} - {}".format(self.id, self.x,
                                                   self.y, self.width))
+
+    def update(self, *args, **kwargs):
+        """
+        Update square attrs
+
+        Args:
+            *args: attrs assignment values
+             1st arg is id attr
+             2nd arg is size attr
+             3rd arg is x attr
+             4th arg is y attr
+
+            **kwargs: keyword args
+        """
+        if ((args or len(args)) != 0):
+            if (len(args) > 0):
+                self.id = args[0]
+            if (len(args) > 1):
+                self.size = args[1]
+            if (len(args) > 2):
+                self.x = args[2]
+            if (len(args) > 3):
+                self.y = args[3]
+        else:
+            if "size" in kwargs:
+                self.size = kwargs["size"]
+                del kwargs["size"]
+
+            for (key, value) in kwargs.items():
+                setattr(self, key, value)
