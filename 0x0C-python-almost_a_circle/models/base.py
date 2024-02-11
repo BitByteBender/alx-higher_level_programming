@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """ Creating: Base class """
+import json
 
 
 class Base:
@@ -26,3 +27,15 @@ class Base:
         else:
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
+
+    def to_json_string(list_dictionaries):
+        """
+        """
+        if isinstance(list_dictionaries, dict):
+            return (json.dumps(
+                   {key: list_dictionaries[key]
+                    for key in sorted(list_dictionaries)},
+                   sort_keys=True)
+            )
+        else:
+            return (json.dumps(list_dictionaries))
