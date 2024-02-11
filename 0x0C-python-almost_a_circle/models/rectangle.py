@@ -169,7 +169,7 @@ class Rectangle(Base):
                                                         self.y, self.width,
                                                         self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Update rectangle attrs
 
@@ -180,6 +180,8 @@ class Rectangle(Base):
              3rd arg is height attr
              4th arg is x attr
              5th arg is y attr
+
+            **kwargs: keyword args
         """
         if ((args or len(args)) != 0):
             if (len(args) > 0):
@@ -192,3 +194,6 @@ class Rectangle(Base):
                 self.x = args[3]
             if (len(args) > 4):
                 self.y = args[4]
+        else:
+            for (key, value) in kwargs.items():
+                setattr(self, key, value)
