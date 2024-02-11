@@ -36,3 +36,16 @@ class Square(Rectangle):
         """
         self.__width = value
         self.__height = value
+
+    def __str__(self):
+        """
+        Returns string representation of rectangle instance
+
+        using format:
+            [Rectangle] (<id>) <x>/<y> - <width>/<height>
+
+        Returns:
+            formatted string representation
+        """
+        return ("[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                  self.y, self.width))
