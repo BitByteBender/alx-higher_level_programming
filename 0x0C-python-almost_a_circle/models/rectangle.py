@@ -140,3 +140,17 @@ class Rectangle(Base):
             calced area
         """
         return (self.__height * self.__width)
+
+    def display(self):
+        """
+        Display rectangle using '#' and coordinations
+
+        Returns:
+            none
+        """
+        if self.width == 0 or self.height == 0:
+            print()
+
+        [print() for i in range(self.y)]
+        for i in range(self.height):
+            print(' ' * self.x + '#' * self.width)
