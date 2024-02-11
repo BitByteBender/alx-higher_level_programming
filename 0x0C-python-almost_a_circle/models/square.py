@@ -1,0 +1,38 @@
+#!/usr/bin/python3
+""" import class rectangle """
+from models.rectangle import Rectangle
+
+
+class Square(Rectangle):
+    """ Square class core """
+
+    def __init__(self, size, x=0, y=0, id=None):
+        """
+        child Class constructor
+
+        Args:
+            size: square size
+            x: square x axis(coord)
+            y: square y axis(coord)
+        """
+        super().__init__(size, size, x, y, id)
+
+    @property
+    def size(self):
+        """
+        Getter method
+        Returns:
+            current square size
+        """
+        return (self.__width)
+
+    @size.setter
+    def size(self, value=0):
+        """
+        Setter method
+
+        Args:
+            value: square width value
+        """
+        self.__width = value
+        self.__height = value
