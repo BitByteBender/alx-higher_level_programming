@@ -24,7 +24,7 @@ class Square(Rectangle):
         Returns:
             current square size
         """
-        return (self.__width)
+        return (self.width)
 
     @size.setter
     def size(self, value=0):
@@ -34,8 +34,8 @@ class Square(Rectangle):
         Args:
             value: square width value
         """
-        self.__width = value
-        self.__height = value
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """
