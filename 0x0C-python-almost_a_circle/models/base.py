@@ -76,3 +76,24 @@ class Base:
             return ([])
         else:
             return (json.loads(json_string))
+
+    @classmethod
+    def create(cls, **dictionary):
+        """
+        Creates an instance with all set attrs
+
+        Args:
+            **dictionary: dict of attrs
+
+        Returns:
+            instance with attrs
+        """
+        if (cls.__name__ == "Square"):
+            dum = cls(1)
+        elif (cls.__name__ == "Rectangle"):
+            dum = cls(1, 1)
+        else:
+            return (None)
+
+        dum.update(**dictionary)
+        return (dum)
