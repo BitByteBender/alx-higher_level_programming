@@ -104,6 +104,7 @@ class TestBase_json_to_str(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.to_json_string([], 1)
 
+
 class TestBase_json_from_str(unittest.TestCase):
     """ Unittesting from_json_string method """
 
@@ -146,6 +147,7 @@ class TestBase_json_from_str(unittest.TestCase):
         with self.assertRaises(TypeError):
             Base.from_json_string()
 
+
 class TestBase_Create(unittest.TestCase):
     """ Unittesting create method """
 
@@ -187,6 +189,7 @@ class TestBase_Create(unittest.TestCase):
         rectA_dict = rectA.to_dictionary()
         rectB = Rectangle.create(**rectA_dict)
         self.assertNotEqual(rectA, rectB)
+
 
 class TestBase_save_to_file(unittest.TestCase):
     """ Unittesting save_to_file method """
@@ -242,6 +245,7 @@ class TestBase_save_to_file(unittest.TestCase):
         except FileNotFoundError:
             pass
 
+
 class TestBase_load_from_file(unittest.TestCase):
     """ Unittesting load_from_file method """
 
@@ -279,7 +283,6 @@ class TestBase_load_from_file(unittest.TestCase):
             os.remove("Square.json")
         except FileNotFoundError:
             pass
-
 
 
 if (__name__ == "__main__"):
