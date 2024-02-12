@@ -97,3 +97,21 @@ class Base:
 
         dum.update(**dictionary)
         return (dum)
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        Returns a list of instances from a .json
+
+        Args:
+            cls: class name
+
+        Returns:
+            list of instances from a .json file
+        """
+        try:
+            with open((cls.__name__ + ".json"), mode='r') as file:
+                objs = cls.from_json_string(file.read())
+                return ([cls.create(**objct) for objct in objs])
+        except FileNotFoundError as FE:
+            return ([])
