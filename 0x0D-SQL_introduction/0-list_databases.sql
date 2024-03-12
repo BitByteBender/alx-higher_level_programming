@@ -1,2 +1,2 @@
--- Selecting databases from mysql.db
-SELECT Db FROM mysql.db;
+-- Displays all Dbs
+SHOW Databases;
