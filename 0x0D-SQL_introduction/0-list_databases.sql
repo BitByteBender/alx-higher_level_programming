@@ -1,1 +1,2 @@
-SELECT * FROM mysql.db
+-- Selecting databases from mysql.db
+SELECT Db FROM mysql.db
