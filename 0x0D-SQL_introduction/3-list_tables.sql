@@ -1,3 +1,2 @@
 -- select tables from the mysql database
-USE mysql;
-SHOW TABLES;
+SHOW TABLES FROM mysql;
