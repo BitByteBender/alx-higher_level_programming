@@ -1,8 +1,8 @@
 #!/usr/bin/node
 'use strict';
 
-const val1 = process.argv[2];
-const val2 = process.argv[3];
+const val1 = parseInt(process.argv[2]);
+const val2 = parseInt(process.argv[3]);
 
 if (isNaN(val1) || isNaN(val2)) {
   console.log('NaN');
