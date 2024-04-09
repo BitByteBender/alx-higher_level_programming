@@ -16,7 +16,7 @@ class Square extends Rectangle {
     while (i < this.height) {
       let row = '';
       for (let j = 0; j < this.width; j++) {
-        row += 'C';
+        row += c;
       }
       console.log(row);
       i++;
