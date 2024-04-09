@@ -1,13 +1,9 @@
 #!/usr/bin/node
 
 'use strict';
-const Rectangle = require('./4-rectangle');
+const sSquare = require('./5-square');
 
-class Square extends Rectangle {
-  constructor (size) {
-    super(size, size);
-  }
-
+class Square extends sSquare {
   charPrint (c) {
     if (c === undefined) {
       c = 'X';
