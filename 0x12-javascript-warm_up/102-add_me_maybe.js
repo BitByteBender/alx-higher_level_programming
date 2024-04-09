@@ -1,6 +1,6 @@
 #!/usr/bin/node
 'use strict';
 
-exports.callMeMoby = (number, theFunction) => {
+exports.addMeMaybe = (number, theFunction) => {
   theFunction(number++);
 };
