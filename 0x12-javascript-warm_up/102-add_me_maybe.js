@@ -1,6 +1,6 @@
 #!/usr/bin/node
 'use strict';
 
-exports.addMeMaybe = (number, theFunction) => {
-  theFunction(number++);
+exports.addMeMaybe = function (number, theFunction) {
+  theFunction(++number);
 };
