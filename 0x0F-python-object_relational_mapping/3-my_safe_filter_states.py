@@ -20,6 +20,7 @@ def display_states(usrname, password, db_name, st_name):
 
 
 if (__name__ == "__main__"):
+    """ Injection Detector """
     for i in range(len(sys.argv[4])):
         if sys.argv[4][i] == ';':
             print("Error! Injection attempt detected.")
