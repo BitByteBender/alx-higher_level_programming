@@ -11,10 +11,12 @@ def display_states(usrname, password, db_name):
     engine = create_engine(db_uri)
     Base.metadata.create_all(engine)
     session = sessionmaker(bind=engine)
-    instance = session().query(State).order_by(State.id)
 
-    for i in instance:
-        print(f"{i.id}: {i.name}")
+    fetchInstance = session().query(State).order_by(State.id).first()
+    if fetchInstance is None:
+        print("Nothing")
+    else:
+        print(f"{fetchInstance.id}: {fetchInstance.name}")
 
 
 if (__name__ == "__main__"):
