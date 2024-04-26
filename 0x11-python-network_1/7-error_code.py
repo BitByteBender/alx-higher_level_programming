@@ -10,7 +10,7 @@ import sys
 
 def url_req(url):
     res = requests.get(url)
-    if (res.status_code >= 400):
+    if (res.status_code < 400):
         return (res.text)
     else:
         return ("Error code: {}".format(res.status_code))
