@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+""" Script that fetches a given URL & display a body response """
 import urllib.request
 import urllib.error
 
