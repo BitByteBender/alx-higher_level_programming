@@ -21,5 +21,9 @@ def get_url(url):
 
 
 if (__name__ == "__main__"):
-    url = sys.argv[1]
-    get_url(url)
+    if len(sys.argv) == 2:
+        url = sys.argv[1]
+        get_url(url)
+    else:
+        print("Max/Min => 2 args")
+        sys.exit(1)
