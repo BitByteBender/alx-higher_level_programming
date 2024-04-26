@@ -11,10 +11,9 @@ import sys
 
 def post_req(url, email):
     eml = urllib.parse.urlencode({"email": email}).encode("utf-8")
-    req = urllib.request.Request(url, data=eml)
-    with urllib.request.urlopen(req) as response:
+    with urllib.request.urlopen(url, eml) as response:
         src = response.read().decode("utf-8")
-        print("Your email is: ", src)
+        print(src)
 
 
 if (__name__ == "__main__"):
