@@ -9,21 +9,11 @@ import sys
 
 
 def get_url(url):
-    try:
-        with urllib.request.urlopen(url) as response:
-            src = response.headers.get("X-Request-Id")
-            if src:
-                print(src)
-            else:
-                print("X-Request-Id not found")
-    except urllib.error.URLError as Err:
-        print("Error fetching URL:", Err)
+    with urllib.request.urlopen(url) as response:
+        src = response.headers.get("X-Request-Id")
+        print(src)
 
 
 if (__name__ == "__main__"):
-    if len(sys.argv) == 2:
-        url = sys.argv[1]
-        get_url(url)
-    else:
-        print("Max/Min => 2 args")
-        sys.exit(1)
+    url = sys.argv[1]
+    get_url(url)
