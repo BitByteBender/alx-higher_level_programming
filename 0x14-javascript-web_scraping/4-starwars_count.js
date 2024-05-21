@@ -8,7 +8,7 @@ const urlAPI = process.argv[2];
 
 const charID = '18';
 
-req.get(urlAPI, (err, res, cnt) => {
+req(urlAPI, (err, res, cnt) => {
   if (err) {
     console.error(err);
     return;
