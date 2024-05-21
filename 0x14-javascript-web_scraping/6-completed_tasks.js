@@ -6,7 +6,7 @@ const req = require('request');
 
 const urlAPI = process.argv[2];
 
-req.get(urlAPI, (err, res, cnt) => {
+req(urlAPI, (err, res, cnt) => {
   if (err) {
     console.error(err);
     return;
@@ -19,5 +19,5 @@ req.get(urlAPI, (err, res, cnt) => {
     return (cpt);
   }, {});
 
-  console.log(JSON.stringify(doneTasks, null, 2));
+  console.log(JSON.stringify(doneTasks, null, 3));
 });
