@@ -14,10 +14,8 @@ req(urlAPI, (err, res, cnt) => {
     return;
   }
 
-  const url = `https://swapi-api.alx-tools.com/api/people/${charID}/`;
-
   const DoneMovieCount = JSON.parse(cnt).results.reduce((count, movie) =>
-    movie.characters.includes(url) ? (count + 1) : count, 0);
+    movie.characters.some(chr => chr.includes(charID)) ? (count + 1) : count, 0);
 
   console.log(DoneMovieCount);
 });
