@@ -20,5 +20,5 @@ req(urlAPI, (err, res, cnt) => {
   }, {});
 
   const formattedOutput = Object.entries(doneTasks).map(([k, val]) => `  '${k}': ${val}`).join(',\n');
-  console.log(`{${formattedOutput}\n}`);
+  console.log(`{${formattedOutput} }`);
 });
