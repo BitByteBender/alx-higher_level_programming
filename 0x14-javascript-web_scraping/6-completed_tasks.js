@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Script that prints number of movies specified by "Wedge Antilles"
+// Script that prints number of tasks completed by user id
 'use strict';
 
 const req = require('request');
@@ -19,6 +19,5 @@ req(urlAPI, (err, res, cnt) => {
     return (cpt);
   }, {});
 
-  const formattedOutput = Object.entries(doneTasks).map(([k, val]) => `  '${k}': ${val}`).join(',\n');
-  console.log(`{${formattedOutput} }`);
+  console.log(JSON.stringify(doneTasks, null, 1));
 });
