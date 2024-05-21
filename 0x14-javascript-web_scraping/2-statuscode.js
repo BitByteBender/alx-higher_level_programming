@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // Script that prints the status code of a url
-'use_strict';
+'use strict';
 
 const req = require('request');
 

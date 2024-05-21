@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // Script that prints title of a Star Wars movie via its ID
-'use_strict';
+'use strict';
 
 const req = require('request');
 

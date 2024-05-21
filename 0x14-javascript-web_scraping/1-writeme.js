@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // Script that writes into a file
-'use_strict';
+'use strict';
 
 const fsys = require('fs');
 

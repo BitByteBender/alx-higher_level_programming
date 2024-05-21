@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // Script that gets the contents of a webpage and stores it in a file.
-'use_strict';
+'use strict';
 
 const req = require('request');
 const fsys = require('fs');
