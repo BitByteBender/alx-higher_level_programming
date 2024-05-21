@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // Script that prints number of movies specified by "Wedge Antilles"
-'use_strict';
+'use strict';
 
 const req = require('request');
 
@@ -16,7 +16,8 @@ req(urlAPI, (err, res, cnt) => {
 
   const url = `https://swapi-api.alx-tools.com/api/people/${charID}/`;
 
-  const count = JSON.parse(cnt).results.filter(movie => movie.characters.includes(url)).length;
+  const DoneMovieCount = JSON.parse(cnt).results.reduce((count, movie) =>
+    movie.characters.includes(url) ? (count + 1) : count, 0);
 
-  console.log(count);
+  console.log(DoneMovieCount);
 });
