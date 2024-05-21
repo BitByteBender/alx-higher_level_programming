@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Script that reads and prints the content of a file
+// Script that writes into a file
 'use_strict';
 
 const fsys = require('fs');
