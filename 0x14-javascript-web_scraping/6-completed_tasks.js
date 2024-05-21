@@ -1,6 +1,6 @@
 #!/usr/bin/node
 // Script that prints number of movies specified by "Wedge Antilles"
-'use_strict';
+'use strict';
 
 const req = require('request');
 
