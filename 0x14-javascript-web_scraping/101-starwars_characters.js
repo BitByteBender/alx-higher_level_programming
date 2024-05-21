@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// Script that prints all actors of Star Wars movie
+// Script that prints all actors of Star Wars movie in same order of the list
 'use strict';
 
 const req = require('request');
